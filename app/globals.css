@@ -59,3 +59,13 @@ body {
 .mask {
 background-color: #0a0a0a;
 }
+
+::-webkit-scrollbar {
+  width: 3px;
+  background-color: rgb(32, 27, 27);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 3px;
+  background-color: rgb(255, 255, 255);
+}
