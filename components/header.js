@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react";
+import React, { useEffect, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 
 import Logo from "../assets/logo.png";
@@ -9,8 +9,20 @@ import CroatiaFlag from "../assets/croatia.jpg";
 import Link from "next/link";
 
 const Header = () => {
+    const [active, setActive] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", (e) => {
+            if (window.scrollY > 10) {
+                setActive(true);
+            } else {
+                setActive(false);
+            }
+        })
+    }, [])
+
     return (
-        <div className="fixed top-0 w-full">
+        <div className={`fixed top-0 w-full transition-all duration-500 ${active ? 'bg-black shadow-lg' : 'transparent'}`}>
             <div className="container mx-auto">
                 <div className="flex items-center py-4">
                     <div className="mr-10">

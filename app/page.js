@@ -1,5 +1,11 @@
+"use client"
+
+import { EXPERIENCE_DATA } from "@/lib/data";
 import MAP from "../assets/map.png";
 import Image from "next/image";
+import { VerticalTimeline } from "react-vertical-timeline-component";
+import TimelineElement from "@/components/TimelineElement";
+
 const Home = () => {
   return (
     <div>
@@ -14,7 +20,31 @@ const Home = () => {
         <h1 className="text-white text-lg font-bold my-2">Delivery areas: Graz, Graz-Umgebung, Deutschlandsberg, Leibnitz, Feldbach and Voitsberg.</h1>
       </div>
       <div className="parallax">
-        <div className="container"></div>
+        <div className="container mx-auto">
+          <div className="flex justify-center py-10">
+            <VerticalTimeline layout="2-columns">
+              {EXPERIENCE_DATA.map((item, key) => {
+                return (
+                  <TimelineElement
+                    key={key}
+                    className="vertical-timeline-element--work"
+                    contentStyle={{ background: item.bgColor, color: '#fff' }}
+                    contentArrowStyle={{ borderRight: '7px solid ' + item.bgColor }}
+                    date={item.date}
+                    iconStyle={{ background: item.bgColor, color: '#fff' }}
+                    icon={item.icon}
+                  >
+                    <h3 className="vertical-timeline-element-title">{item.title}</h3>
+                    <h4 className="vertical-timeline-element-subtitle text-sm">{item.subtitle}</h4>
+                    <p className="text-sm">
+                      {item.description}
+                    </p>
+                  </TimelineElement>
+                )
+              })}
+            </VerticalTimeline>
+          </div>
+        </div>
       </div>
     </div>
   )

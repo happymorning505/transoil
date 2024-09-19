@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import "react-vertical-timeline-component/style.min.css";
 import Header from "@/components/header";
 
 const geistSans = localFont({
