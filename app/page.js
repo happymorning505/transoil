@@ -14,7 +14,7 @@ const Home = () => {
         <h2 className="text-white text-[32px] font-black">We accept EuroCard</h2>
       </div>
       <div className="w-full flex justify-center bg-black flex-col items-center pt-20">
-        <h1 className="text-white">Trans-Oil's delivery area</h1>
+        <h1 className="text-white">Trans-Oils delivery area</h1>
         <h1 className="text-[#FEF431] text-xl font-black mt-2">We deliver on time and to large parts of Styria</h1>
         <Image src={MAP} alt="map" className="w-[600px] h-auto" />
         <h1 className="text-white text-lg font-bold my-2">Delivery areas: Graz, Graz-Umgebung, Deutschlandsberg, Leibnitz, Feldbach and Voitsberg.</h1>
