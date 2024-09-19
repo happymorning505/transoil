@@ -22,11 +22,11 @@ const Header = () => {
     }, [])
 
     return (
-        <div className={`fixed top-0 w-full transition-all duration-500 ${active ? 'bg-black shadow-lg' : 'transparent'}`}>
+        <div className={`fixed top-0 w-full z-10 transition-all duration-500 ${active ? 'bg-[#111111] shadow-lg' : 'transparent'}`}>
             <div className="container mx-auto">
                 <div className="flex items-center py-4">
                     <div className="mr-10">
-                        <Image src={Logo} width={300} height="auto" alt="logo" />
+                        <Image src={Logo} width={200} height="auto" alt="logo" />
                     </div>
                     <div className="text-white mx-2 text-lg px-4 py-2 hover:bg-white/30 rounded-md transition-all duration-300">
                         <Link href={"/"}>

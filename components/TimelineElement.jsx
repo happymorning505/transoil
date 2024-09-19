@@ -1,3 +1,5 @@
+"use client"
+
 import { useIsVisible } from "@/lib/hooks";
 import { Fragment, useRef } from "react";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";

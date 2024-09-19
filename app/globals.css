@@ -41,4 +41,21 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+
+}
+
+.vertical-timeline-element-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+
+.vertical-timeline-element-content p {
+  margin-top: 0 !important;
+}
+
+.mask {
+background-color: #0a0a0a;
 }
