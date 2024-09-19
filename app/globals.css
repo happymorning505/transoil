@@ -25,3 +25,20 @@ body {
     text-wrap: balance;
   }
 }
+
+.bg-home {
+  background-image: url(../assets/home.png);
+}
+
+.parallax {
+  /* The image used */
+  background-image: url(../assets/petrolstation.png);
+
+  /* Full height */
+  height: 100%; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
